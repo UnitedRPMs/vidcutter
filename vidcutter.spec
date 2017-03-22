@@ -1,30 +1,29 @@
-Summary:    FFmpeg based video cutter & joiner with a modern PyQt5 GUI
+Summary:    the simple & fast video cutter & joiner with the help of mpv + FFmpeg
 Name:       vidcutter
-Version:    2.2.5
+Version:    3.0.1
 Release:    1%{?dist}
-License:    GPLv3
-Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
+License:    GPLv3+
+Source0:    https://github.com/ozmartian/%{pkg_name}/archive/%{version}.tar.gz
 Group:      Applications/Multimedia
 BuildArch:  noarch
-Url:        http://vidcutter.ozmartians.com/
+Url:        http://vidcutter.ozmartians.com
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: python3-devel 
 BuildRequires: python3-setuptools 
-Requires: ffmpeg 
 Requires: python3-qt5 
-Requires: qt5-qtmultimedia
+Requires: mpv-libs
+Requires: ffmpeg 
+Requires: mediainfo
 
 
 %description
-Cross-platform Qt5 based app for quick and easy video trimming/splitting 
-and merging/joining for simple quick edits. FFmpeg drives the backend with 
-a stylishly hand edited Qt5 UI. 
-
-
+ The simplest & sexiest tool for cutting and joining your videos without the need for
+ re-encoding or a diploma in multimedia. VidCutter focuses on getting the job done
+ using tried and true tech in its arsenal via mpv and FFmpeg.
 
 %prep
 %setup -q 
-sed -i "s/pypi/arch/" __init__.py
+sed -i "s/pypi/rpm/" vidcutter/__init__.py
 
 %build
 python3 setup.py build
@@ -37,13 +36,18 @@ rm -rf %{buildroot}
 
 %files 
 
+%license vidcutter/LICENSE.html LICENSE
+%doc README.md
 %{_bindir}/vidcutter
-%{python3_sitelib}/vidcutter-%{version}-py*.egg-info/
-%{python3_sitelib}/vidcutter/
+%{python3_sitelib}/%{pkg_name}
+%{python3_sitelib}/%{pkg_name}-%{version}-py?.?.egg-info
 %{_datadir}/applications/vidcutter.desktop
-%{_datadir}/pixmaps/vidcutter.png
+%{_datadir}/pixmaps/vidcutter.svg
+
 
 %changelog
 
+* Thu Mar 23 2017 Pete Alexandrou <pete AT ozmartians DOT com> 3.0.1-1
+- Latest version build w/ libmpv support
 * Fri Jan 20 2017 David Vásquez <davidva AT tutanota DOT com> 2.2.5-1
 - Initial build
