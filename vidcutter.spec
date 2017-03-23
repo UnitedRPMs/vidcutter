@@ -3,7 +3,7 @@ Name:       vidcutter
 Version:    3.0.1
 Release:    1%{?dist}
 License:    GPLv3+
-Source0:    https://github.com/ozmartian/%{pkg_name}/archive/%{version}.tar.gz
+Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
 Group:      Applications/Multimedia
 BuildArch:  noarch
 Url:        http://vidcutter.ozmartians.com
