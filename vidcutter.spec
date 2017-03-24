@@ -39,8 +39,8 @@ rm -rf %{buildroot}
 %license vidcutter/LICENSE.html LICENSE
 %doc README.md
 %{_bindir}/vidcutter
-%{python3_sitelib}/%{pkg_name}
-%{python3_sitelib}/%{pkg_name}-%{version}-py?.?.egg-info
+%{python3_sitelib}/%{name}
+%{python3_sitelib}/%{name}-%{version}-py?.?.egg-info
 %{_datadir}/applications/vidcutter.desktop
 %{_datadir}/pixmaps/vidcutter.svg
 
