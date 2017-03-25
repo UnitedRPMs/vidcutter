@@ -38,16 +38,18 @@ rm -rf %{buildroot}
 
 %license vidcutter/LICENSE.html LICENSE
 %doc README.md
-%{_bindir}/vidcutter
+%{_bindir}/%{name}
 %{python3_sitelib}/%{name}
 %{python3_sitelib}/%{name}-%{version}-py?.?.egg-info
-%{_datadir}/applications/vidcutter.desktop
-%{_datadir}/pixmaps/vidcutter.svg
-
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
+%{_datadir}/pixmaps/%{name}.svg
 
 %changelog
 
 * Thu Mar 23 2017 Pete Alexandrou <pete AT ozmartians DOT com> 3.0.1-1
 - Latest version build w/ libmpv support
+
 * Fri Jan 20 2017 David Vásquez <davidva AT tutanota DOT com> 2.2.5-1
 - Initial build
