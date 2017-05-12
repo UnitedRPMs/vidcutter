@@ -1,6 +1,6 @@
-Summary:    the simple & fast video cutter & joiner with the help of mpv + FFmpeg
+Summary:    the simplest + fastest video cut & merge tool
 Name:       vidcutter
-Version:    3.0.1
+Version:    3.2.0
 Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
@@ -36,7 +36,7 @@ rm -rf %{buildroot}
 
 %files 
 
-%license vidcutter/LICENSE.html LICENSE
+%license LICENSE
 %doc README.md
 %{_bindir}/%{name}
 %{python3_sitelib}/%{name}
@@ -47,6 +47,8 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/%{name}.svg
 
 %changelog
+* Fri May 12 2017 Pete Alexandrou <pete AT ozmartians DOT com> 3.2.0-1
+- Latest release
 
 * Thu Mar 23 2017 Pete Alexandrou <pete AT ozmartians DOT com> 3.0.1-1
 - Latest version build w/ libmpv support
