@@ -1,7 +1,7 @@
-Summary:    the simplest + fastest video cut & merge tool
-Name:       vidcutter
-Version:    3.2.0
-Release:    2%{?dist}
+Summary:   the simplest + fastest video cutter & joiner
+Name:      vidcutter
+Version:    3.5.0
+Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
 Group:      Applications/Multimedia
@@ -44,9 +44,13 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
+%{_datadir}/mime/packages/x-vidcutter.xml
 %{_datadir}/pixmaps/%{name}.svg
 
 %changelog
+* Mon May 29 2017 Pete Alexandrou <pete AT ozmartians DOT com> 3.5.0-1
+- 3.5.0 release
+
 * Fri May 12 2017 Pete Alexandrou <pete AT ozmartians DOT com> 3.2.0-1
 - Latest release
 
