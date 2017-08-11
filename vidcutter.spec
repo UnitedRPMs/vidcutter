@@ -4,6 +4,7 @@ Version:    4.0.0
 Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
+BuildArch:  x86_64
 Group:      Applications/Multimedia
 Url:        http://vidcutter.ozmartians.com
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -28,6 +29,7 @@ Requires: python3-pyopengl
 %setup -q 
 
 %build
+%define debug_package %{nil}
 python3 setup.py build
 
 %install
