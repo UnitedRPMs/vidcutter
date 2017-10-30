@@ -44,7 +44,7 @@ rm -rf %{buildroot}
 %doc README.md
 %{_bindir}/%{name}
 %{python3_sitearch}/%{name}
-%{python3_sitearch}/%{name}-%{version}-py?.?.egg-info
+%{python3_sitearch}/%{name}-%{version}-py*.egg-info
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/16x16/apps/%{name}.png
 %{_datadir}/icons/hicolor/128x128/apps/%{name}.png
