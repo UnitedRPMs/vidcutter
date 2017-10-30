@@ -1,7 +1,7 @@
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
-Version:    4.0.0
-Release:    2%{?dist}
+Version:    4.0.5
+Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
 BuildArch:  x86_64
@@ -60,6 +60,10 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/%{name}.svg
 
 %changelog
+
+* Sun Oct 29 2017 David Vásquez <davidva AT tutanota DOT com> 4.0.5-1
+- 4.0.5 release
+
 * Fri Aug 11 2017 Pete Alexandrou <pete AT ozmartians DOT com> 4.0.0-2
 - Prevent debuginfo builds + specify x64 architecture specifically
 
