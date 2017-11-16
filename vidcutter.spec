@@ -58,6 +58,7 @@ rm -rf %{buildroot}
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/mime/packages/x-%{name}.xml
 %{_datadir}/pixmaps/%{name}.svg
+%{_datadir}/appdata/%{name}.appdata.xml
 
 %changelog
 
