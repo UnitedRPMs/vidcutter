@@ -45,7 +45,7 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{python3_sitearch}/%{name}
 %{python3_sitearch}/%{name}-*-py*.egg-info
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/16x16/apps/%{name}.png
 %{_datadir}/icons/hicolor/128x128/apps/%{name}.png
 %{_datadir}/icons/hicolor/22x22/apps/%{name}.png
@@ -58,7 +58,7 @@ rm -rf %{buildroot}
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/mime/packages/x-%{name}.xml
 %{_datadir}/pixmaps/%{name}.svg
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/appdata/*.appdata.xml
 
 %changelog
 
