@@ -1,6 +1,6 @@
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
-Version:    5.0.0
+Version:    5.0.5
 Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{version}.tar.gz
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{_datadir}/appdata/%{name}.appdata.xml
 
 %changelog
+
+* Sat Dec 02 2017 David Vásquez <davidva AT tutanota DOT com> 5.0.5-1
+- Updated to 5.0.5
 
 * Wed Nov 15 2017 David Vásquez <davidva AT tutanota DOT com> 5.0.0-1
 - 5.0.0 release
