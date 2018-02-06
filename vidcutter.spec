@@ -1,14 +1,14 @@
-%global commit0 18c04afe1ddeec38982e24a50a14482834019db0
+%global commit0 a7ba063fc34db003498d7a94192510a59add9ac8
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
-Version:    5.0.5
-Release:    2%{?dist}
+Version:    5.5.0
+Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
-Patch:      OpenGL_fix.patch
+#Patch:      OpenGL_fix.patch
 BuildArch:  x86_64
 Group:      Applications/Multimedia
 Url:        http://vidcutter.ozmartians.com
@@ -31,7 +31,7 @@ Requires: python3-pyopengl
  using tried and true tech in its arsenal via mpv and FFmpeg.
 
 %prep
-%autosetup -n %{name}-%{commit0} -p1
+%autosetup -n %{name}-%{commit0} 
 
 %build
 %define debug_package %{nil}
@@ -64,8 +64,13 @@ rm -rf %{buildroot}
 %{_datadir}/mime/packages/x-%{name}.xml
 %{_datadir}/pixmaps/%{name}.svg
 %{_datadir}/appdata/*.appdata.xml
+%{_datadir}/metainfo/com.ozmartians.%{name}.appdata.xml
+%{_datadir}/mime/packages/wtv.xml
 
 %changelog
+
+* Mon Feb 05 2018 David Vásquez <davidva AT tutanota DOT com> 5.5.0-1
+- Updated to 5.5.0
 
 * Tue Dec 26 2017 David Vásquez <davidva AT tutanota DOT com> 5.0.5-2
 - Reversing Python 3 OpenGL
