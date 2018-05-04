@@ -51,21 +51,10 @@ rm -rf %{buildroot}
 %{python3_sitearch}/%{name}
 %{python3_sitearch}/%{name}-*-py*.egg-info
 %{_datadir}/applications/*.desktop
-%{_datadir}/icons/hicolor/16x16/apps/%{name}.png
-%{_datadir}/icons/hicolor/128x128/apps/%{name}.png
-%{_datadir}/icons/hicolor/22x22/apps/%{name}.png
-%{_datadir}/icons/hicolor/24x24/apps/%{name}.png
-%{_datadir}/icons/hicolor/256x256/apps/%{name}.png
-%{_datadir}/icons/hicolor/32x32/apps/%{name}.png
-%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
-%{_datadir}/icons/hicolor/512x512/apps/%{name}.png
-%{_datadir}/icons/hicolor/64x64/apps/%{name}.png
-%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
-%{_datadir}/mime/packages/x-%{name}.xml
-%{_datadir}/pixmaps/%{name}.svg
-%{_datadir}/appdata/*.appdata.xml
-%{_datadir}/metainfo/com.ozmartians.%{name}.appdata.xml
-%{_datadir}/mime/packages/wtv.xml
+%{_datadir}/icons/hicolor/*/apps/com.ozmartians.VidCutter.png
+%{_datadir}/icons/hicolor/scalable/apps/com.ozmartians.VidCutter.svg
+%{_datadir}/mime/packages/com.ozmartians.VidCutter.xml
+%{_datadir}/metainfo/com.ozmartians.VidCutter.appdata.xml
 
 %changelog
 
