@@ -1,11 +1,11 @@
-%global commit0 ce30ac924b3135ad35f26459a21590825f3d8611
+%global commit0 68439851f96e58bcc587a9f1ae1a52d8e8df38dc
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
 Version:    6.0.0
-Release:    0.1%{?dist}
+Release:    0.2%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 #Patch:      OpenGL_fix.patch
@@ -57,6 +57,9 @@ rm -rf %{buildroot}
 %{_datadir}/metainfo/com.ozmartians.VidCutter.appdata.xml
 
 %changelog
+
+* Wed Jul 04 2018 David Va <davidva AT tuta DOT io> 6.0.0-0.2
+- Updated to current commit
 
 * Thu May 03 2018 David Vásquez <davidva AT tutanota DOT com> 6.0.0-0.1
 - Updated to 6.0.0 RC1
