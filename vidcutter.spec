@@ -48,6 +48,8 @@ rm -rf %{buildroot}
 %license LICENSE
 %doc README.md
 %{_bindir}/%{name}
+%{_docdir}/vidcutter/CHANGELOG
+%{_docdir}/vidcutter/LICENSE
 %{python3_sitearch}/%{name}
 %{python3_sitearch}/%{name}-*-py*.egg-info
 %{_datadir}/applications/*.desktop
