@@ -13,6 +13,7 @@ Group:      Applications/Multimedia
 Url:        http://vidcutter.ozmartians.com
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
+BuildRequires: gcc-c++
 BuildRequires: python3-devel 
 BuildRequires: python3-setuptools
 BuildRequires: mpv-libs-devel
