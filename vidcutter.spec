@@ -33,6 +33,9 @@ Requires: python3-pyopengl
 %prep
 %autosetup -n %{name}-%{commit0} 
 
+# Remove shebang from Python libraries
+find -depth -type f -writable -name "*.py" -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
+
 %build
 %define debug_package %{nil}
 python3 setup.py build
