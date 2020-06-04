@@ -1,11 +1,11 @@
-%global commit0 2970a3c77d7dd965db5d592d217bfd36b8197930
+%global commit0 6d42b88a75fc67376b9f39b98cd72c8933840d7e
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
 Version:    6.0.0.5
-Release:    1%{?dist}
+Release:    3%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 BuildArch:  x86_64
@@ -14,7 +14,11 @@ Url:        http://vidcutter.ozmartians.com
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires: gcc-c++
-BuildRequires: python3-devel 
+%if 0%{?fedora} >= 33
+BuildRequires:  python3.9-devel
+%else
+BuildRequires:  python3-devel
+%endif
 BuildRequires: python3-setuptools
 BuildRequires: mpv-libs-devel
 
@@ -62,6 +66,9 @@ rm -rf %{buildroot}
 %{_datadir}/metainfo/com.ozmartians.VidCutter.appdata.xml
 
 %changelog
+
+* Tue Jun 02 2020 David Va <davidva AT tuta DOT io> 6.0.0.5-3
+- Rebuilt for python3.9
 
 * Tue Jul 16 2019 David Va <davidva AT tuta DOT io> 6.0.0.5-2
 - Updated to 6.0.0.5
