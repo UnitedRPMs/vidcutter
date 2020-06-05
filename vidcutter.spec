@@ -2,6 +2,8 @@
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
+%define _legacy_common_support 1
+
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
 Version:    6.0.0.5
