@@ -25,13 +25,18 @@ BuildRequires: python%{python3_pkgversion}-setuptools
 BuildRequires: python3-rpm-macros
 %endif
 BuildRequires: mpv-libs-devel
-
+#-------------------------------------------
+%if 0%{?fedora} >= 33
+Requires: python3.8
+Requires: python3.8-qt5 
+Requires: python3.8-pyopengl
+%else
 Requires: python3-qt5 
+Requires: python3-pyopengl
+%endif
 Requires: mpv-libs
 Requires: ffmpeg 
 Requires: mediainfo
-Requires: python3-pyopengl
-
 
 %description
  The simplest & sexiest tool for cutting and joining your videos without the need for
