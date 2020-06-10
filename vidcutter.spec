@@ -3,6 +3,7 @@
 %global gver .git%{shortcommit0}
 
 %define _legacy_common_support 1
+%undefine _debugsource_packages
 
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
@@ -17,11 +18,12 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires: gcc-c++
 %if 0%{?fedora} >= 33
-BuildRequires:  python3.9-devel
+BuildRequires:  python3.8-devel
 %else
-BuildRequires:  python3-devel
+BuildRequires: python%{python3_pkgversion}-devel
+BuildRequires: python%{python3_pkgversion}-setuptools
+BuildRequires: python3-rpm-macros
 %endif
-BuildRequires: python3-setuptools
 BuildRequires: mpv-libs-devel
 
 Requires: python3-qt5 
@@ -39,15 +41,27 @@ Requires: python3-pyopengl
 %prep
 %autosetup -n %{name}-%{commit0} 
 
-# Remove shebang from Python libraries
-find -depth -type f -writable -name "*.py" -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
+# Change shebang in all relevant files in this directory and all subdirectories
+# See `man find` for how the `-exec command {} +` syntax works
+%if 0%{?fedora} >= 33
+find -depth -type f -writable -name "*.py" -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!/usr/bin/python3.8=' {} +
+%else
+find -type f -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
+%endif
 
 %build
-%define debug_package %{nil}
-python3 setup.py build
+%if 0%{?fedora} >= 33
+python3.8 setup.py build
+%else
+%py3_build
+%endif
 
 %install
-python3 setup.py install --root %{buildroot}
+%if 0%{?fedora} >= 33
+python3.8 setup.py install --root=%{buildroot} --optimize=1 --skip-build
+%else
+%py3_install
+%endif
 
 %clean
 rm -rf %{buildroot}
@@ -59,8 +73,13 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_docdir}/vidcutter/CHANGELOG
 %{_docdir}/vidcutter/LICENSE
+%if 0%{?fedora} >= 33
+%{_libdir}/python3.8/site-packages/%{name}
+%{_libdir}/python3.8/site-packages/%{name}-*-py*.egg-info
+%else
 %{python3_sitearch}/%{name}
 %{python3_sitearch}/%{name}-*-py*.egg-info
+%endif
 %{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/com.ozmartians.VidCutter.png
 %{_datadir}/icons/hicolor/scalable/apps/com.ozmartians.VidCutter.svg
