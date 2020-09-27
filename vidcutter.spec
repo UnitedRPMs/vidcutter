@@ -8,9 +8,13 @@
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
 Version:    6.0.0.5
-Release:    3%{?dist}
+Release:    4%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+# wtf? if you want the package in Urpms, you need update to python >= 3.8 ... 
+Patch:      https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/260.patch
+Patch1:     https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/281.patch
+Patch2:     https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/283.patch
 BuildArch:  x86_64
 Group:      Applications/Multimedia
 Url:        http://vidcutter.ozmartians.com
@@ -20,8 +24,8 @@ BuildRequires: gcc-c++
 %if 0%{?fedora} >= 33
 BuildRequires:  python3.8-devel
 %else
-BuildRequires: python%{python3_pkgversion}-devel
-BuildRequires: python%{python3_pkgversion}-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 BuildRequires: python3-rpm-macros
 %endif
 BuildRequires: mpv-libs-devel
@@ -29,6 +33,10 @@ BuildRequires: mpv-libs-devel
 %if 0%{?fedora} >= 33
 Requires: python3.8
 Requires: python3.8-qt5 
+Requires: python3.8-numpy
+Requires: python3.8-simplejson
+Requires: python3.8-dbus
+Requires: python3.8-requests
 Requires: python3.8-pyopengl
 %else
 Requires: python3-qt5 
@@ -44,7 +52,7 @@ Requires: mediainfo
  using tried and true tech in its arsenal via mpv and FFmpeg.
 
 %prep
-%autosetup -n %{name}-%{commit0} 
+%autosetup -n %{name}-%{commit0} -p1
 
 # Change shebang in all relevant files in this directory and all subdirectories
 # See `man find` for how the `-exec command {} +` syntax works
@@ -93,8 +101,9 @@ rm -rf %{buildroot}
 
 %changelog
 
-* Tue Jun 02 2020 David Va <davidva AT tuta DOT io> 6.0.0.5-3
+* Tue Jun 02 2020 David Va <davidva AT tuta DOT io> 6.0.0.5-4
 - Rebuilt for python3.9
+- Merged some pull request
 
 * Tue Jul 16 2019 David Va <davidva AT tuta DOT io> 6.0.0.5-2
 - Updated to 6.0.0.5
