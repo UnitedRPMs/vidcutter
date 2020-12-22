@@ -1,0 +1,29 @@
+From 799b2994412a95c78fb2302c41fda52b1a87df24 Mon Sep 17 00:00:00 2001
+From: David Mortals <david@mortals.city>
+Date: Sat, 11 Jul 2020 18:56:30 +1200
+Subject: [PATCH] add new keyboard shortcuts([], Bracket left/right) for
+ startClip/endClip
+
+---
+ vidcutter/videocutter.py | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index c470a4a..9ee03bc 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -1647,6 +1647,14 @@ def keyPressEvent(self, event: QKeyEvent) -> None:
+                 self.playMedia()
+                 return
+ 
++            if event.key() == Qt.Key_BracketLeft:
++                self.clipStart()
++                return
++
++            if event.key() == Qt.Key_BracketRight:
++                self.clipEnd()
++                return
++
+             if event.key() == Qt.Key_Escape and self.isFullScreen():
+                 self.toggleFullscreen()
+                 return

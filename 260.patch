@@ -1,0 +1,1648 @@
+From ca712adc9f01283677396b5f82d0de0ed0059e04 Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Tue, 13 Nov 2018 19:37:37 +0100
+Subject: [PATCH 01/27] Remove executable permissions from image
+
+---
+ _build/InnoSetup/assets/SmallWizardImage.bmp       | Bin
+ _build/InnoSetup/assets/WizModernImage.bmp         | Bin
+ _build/InnoSetup/assets/WizModernImage.psd         | Bin
+ _packaging/snap/snapcraft.yaml                     |   0
+ vidcutter/images/_originals/clip-index-header.psd  | Bin
+ vidcutter/images/_originals/dialog-backdrop-02.psd | Bin
+ vidcutter/images/_originals/dialog-backdrop.psd    | Bin
+ vidcutter/images/_originals/player-buttons.psd     | Bin
+ vidcutter/images/_originals/startup-backdrop.psd   | Bin
+ vidcutter/images/_originals/vidcutter-dmg.png      | Bin
+ vidcutter/images/arrow-left-on.png                 | Bin
+ vidcutter/images/arrow-left.png                    | Bin
+ vidcutter/images/arrow-right-on.png                | Bin
+ vidcutter/images/arrow-right.png                   | Bin
+ vidcutter/images/dark/info-active.png              | Bin
+ vidcutter/images/dark/info-hover.png               | Bin
+ vidcutter/images/dark/info.png                     | Bin
+ vidcutter/images/dialog-backdrop.png               | Bin
+ vidcutter/images/filmstrip-thumbs.png              | Bin
+ vidcutter/images/handle-nothumbs.png               | Bin
+ vidcutter/images/handle.png                        | Bin
+ vidcutter/images/light/info-active.png             | Bin
+ vidcutter/images/light/info-hover.png              | Bin
+ vidcutter/images/light/info.png                    | Bin
+ vidcutter/images/light/toolbar-end.png             | Bin
+ vidcutter/images/light/toolbar-open.png            | Bin
+ vidcutter/images/light/toolbar-pause.png           | Bin
+ vidcutter/images/light/toolbar-play.png            | Bin
+ vidcutter/images/light/toolbar-save.png            | Bin
+ vidcutter/images/light/toolbar-start.png           | Bin
+ vidcutter/images/startup-backdrop.jpg              | Bin
+ 31 files changed, 0 insertions(+), 0 deletions(-)
+ mode change 100755 => 100644 _build/InnoSetup/assets/SmallWizardImage.bmp
+ mode change 100755 => 100644 _build/InnoSetup/assets/WizModernImage.bmp
+ mode change 100755 => 100644 _build/InnoSetup/assets/WizModernImage.psd
+ mode change 100755 => 100644 _packaging/snap/snapcraft.yaml
+ mode change 100755 => 100644 vidcutter/images/_originals/clip-index-header.psd
+ mode change 100755 => 100644 vidcutter/images/_originals/dialog-backdrop-02.psd
+ mode change 100755 => 100644 vidcutter/images/_originals/dialog-backdrop.psd
+ mode change 100755 => 100644 vidcutter/images/_originals/player-buttons.psd
+ mode change 100755 => 100644 vidcutter/images/_originals/startup-backdrop.psd
+ mode change 100755 => 100644 vidcutter/images/_originals/vidcutter-dmg.png
+ mode change 100755 => 100644 vidcutter/images/arrow-left-on.png
+ mode change 100755 => 100644 vidcutter/images/arrow-left.png
+ mode change 100755 => 100644 vidcutter/images/arrow-right-on.png
+ mode change 100755 => 100644 vidcutter/images/arrow-right.png
+ mode change 100755 => 100644 vidcutter/images/dark/info-active.png
+ mode change 100755 => 100644 vidcutter/images/dark/info-hover.png
+ mode change 100755 => 100644 vidcutter/images/dark/info.png
+ mode change 100755 => 100644 vidcutter/images/dialog-backdrop.png
+ mode change 100755 => 100644 vidcutter/images/filmstrip-thumbs.png
+ mode change 100755 => 100644 vidcutter/images/handle-nothumbs.png
+ mode change 100755 => 100644 vidcutter/images/handle.png
+ mode change 100755 => 100644 vidcutter/images/light/info-active.png
+ mode change 100755 => 100644 vidcutter/images/light/info-hover.png
+ mode change 100755 => 100644 vidcutter/images/light/info.png
+ mode change 100755 => 100644 vidcutter/images/light/toolbar-end.png
+ mode change 100755 => 100644 vidcutter/images/light/toolbar-open.png
+ mode change 100755 => 100644 vidcutter/images/light/toolbar-pause.png
+ mode change 100755 => 100644 vidcutter/images/light/toolbar-play.png
+ mode change 100755 => 100644 vidcutter/images/light/toolbar-save.png
+ mode change 100755 => 100644 vidcutter/images/light/toolbar-start.png
+ mode change 100755 => 100644 vidcutter/images/startup-backdrop.jpg
+
+diff --git a/_build/InnoSetup/assets/SmallWizardImage.bmp b/_build/InnoSetup/assets/SmallWizardImage.bmp
+old mode 100755
+new mode 100644
+diff --git a/_build/InnoSetup/assets/WizModernImage.bmp b/_build/InnoSetup/assets/WizModernImage.bmp
+old mode 100755
+new mode 100644
+diff --git a/_build/InnoSetup/assets/WizModernImage.psd b/_build/InnoSetup/assets/WizModernImage.psd
+old mode 100755
+new mode 100644
+diff --git a/_packaging/snap/snapcraft.yaml b/_packaging/snap/snapcraft.yaml
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/_originals/clip-index-header.psd b/vidcutter/images/_originals/clip-index-header.psd
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/_originals/dialog-backdrop-02.psd b/vidcutter/images/_originals/dialog-backdrop-02.psd
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/_originals/dialog-backdrop.psd b/vidcutter/images/_originals/dialog-backdrop.psd
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/_originals/player-buttons.psd b/vidcutter/images/_originals/player-buttons.psd
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/_originals/startup-backdrop.psd b/vidcutter/images/_originals/startup-backdrop.psd
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/_originals/vidcutter-dmg.png b/vidcutter/images/_originals/vidcutter-dmg.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/arrow-left-on.png b/vidcutter/images/arrow-left-on.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/arrow-left.png b/vidcutter/images/arrow-left.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/arrow-right-on.png b/vidcutter/images/arrow-right-on.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/arrow-right.png b/vidcutter/images/arrow-right.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/dark/info-active.png b/vidcutter/images/dark/info-active.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/dark/info-hover.png b/vidcutter/images/dark/info-hover.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/dark/info.png b/vidcutter/images/dark/info.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/dialog-backdrop.png b/vidcutter/images/dialog-backdrop.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/filmstrip-thumbs.png b/vidcutter/images/filmstrip-thumbs.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/handle-nothumbs.png b/vidcutter/images/handle-nothumbs.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/handle.png b/vidcutter/images/handle.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/info-active.png b/vidcutter/images/light/info-active.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/info-hover.png b/vidcutter/images/light/info-hover.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/info.png b/vidcutter/images/light/info.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/toolbar-end.png b/vidcutter/images/light/toolbar-end.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/toolbar-open.png b/vidcutter/images/light/toolbar-open.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/toolbar-pause.png b/vidcutter/images/light/toolbar-pause.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/toolbar-play.png b/vidcutter/images/light/toolbar-play.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/toolbar-save.png b/vidcutter/images/light/toolbar-save.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/light/toolbar-start.png b/vidcutter/images/light/toolbar-start.png
+old mode 100755
+new mode 100644
+diff --git a/vidcutter/images/startup-backdrop.jpg b/vidcutter/images/startup-backdrop.jpg
+old mode 100755
+new mode 100644
+
+From cb5fea15941de5b8b66db66e7babe821a1e3d3d9 Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Tue, 13 Nov 2018 20:06:17 +0100
+Subject: [PATCH 02/27] Use dict.items()
+
+---
+ vidcutter/libs/videoservice.py | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 993fab0..37c83cb 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -112,8 +112,7 @@ def findBackends(settings: QSettings) -> Munch:
+         tools.ffmpeg = settings.value('ffmpeg', None, type=str)
+         tools.ffprobe = settings.value('ffprobe', None, type=str)
+         tools.mediainfo = settings.value('mediainfo', None, type=str)
+-        for tool in list(tools.keys()):
+-            path = tools[tool]
++        for tool, path in tools.items():
+             if path is None or not len(path) or not os.path.isfile(path):
+                 for exe in VideoService.config.binaries[os.name][tool]:
+                     if VideoService.frozen:
+
+From e7260e1f05b1c69e812194106aeeb549c088480e Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Tue, 13 Nov 2018 20:51:22 +0100
+Subject: [PATCH 03/27] Parse command arguments as list
+
+instead of string using broken shell escaping.
+---
+ vidcutter/libs/config.py       |   6 +-
+ vidcutter/libs/videoservice.py | 165 +++++++++++++++++++++++----------
+ vidcutter/mediainfo.py         |   2 +-
+ 3 files changed, 121 insertions(+), 52 deletions(-)
+
+diff --git a/vidcutter/libs/config.py b/vidcutter/libs/config.py
+index 0d0a093..34bb9fa 100644
+--- a/vidcutter/libs/config.py
++++ b/vidcutter/libs/config.py
+@@ -68,9 +68,9 @@ def mpeg_formats(self) -> list:
+     @property
+     def encoding(self) -> dict:
+         return {
+-            'hevc': 'libx265 -tune zerolatency -preset ultrafast -x265-params crf=23 -qp 4 -flags +cgop',
+-            'h264': 'libx264 -tune film -preset ultrafast -x264-params crf=23 -qp 0 -flags +cgop',
+-            'vp9': 'libvpx-vp9 -deadline best -quality best'
++            'hevc': ['libx265', '-tune', 'zerolatency', '-preset', 'ultrafast', '-x265-params', 'crf=23', '-qp', '4', '-flags', '+cgop'],
++            'h264': ['libx264', '-tune', 'film', '-preset', 'ultrafast', '-x264-params', 'crf=23', '-qp', '0', '-flags', '+cgop'],
++            'vp9': ['libvpx-vp9', '-deadline', 'best', '-quality', 'best'],
+         }
+ 
+     @property
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 37c83cb..0ddafd8 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -26,7 +26,6 @@
+ import logging
+ import os
+ import re
+-import shlex
+ import sys
+ from bisect import bisect_left
+ from functools import partial
+@@ -174,10 +173,17 @@ def captureFrame(settings: QSettings, source: str, frametime: str, thumbsize: QS
+             imagecap = img.fileName()
+             cmd = VideoService.findBackends(settings).ffmpeg
+             tsize = '{0:d}x{1:d}'.format(thumbsize.width(), thumbsize.height())
+-            args = '-hide_banner -ss {frametime} -i "{source}" -vframes 1 -s {tsize} -y "{imagecap}"'.format(**locals())
++            args = [
++                '-hide_banner',
++                '-ss', frametime,
++                '-i', source,
++                '-vframes', '1',
++                '-s', tsize,
++                '-y', imagecap,
++            ]
+             proc = VideoService.initProc()
+             if proc.state() == QProcess.NotRunning:
+-                proc.start(cmd, shlex.split(args))
++                proc.start(cmd, args)
+                 proc.waitForFinished(-1)
+                 if proc.exitStatus() == QProcess.NormalExit and proc.exitCode() == 0:
+                     capres = QPixmap(imagecap, 'JPG')
+@@ -240,7 +246,7 @@ def framesize(self, source: str = None) -> QSize:
+         if source is None and hasattr(self.streams, 'video'):
+             return QSize(int(self.streams.video.width), int(self.streams.video.height))
+         else:
+-            args = '-i "{}"'.format(source)
++            args = ['-i', source]
+             result = self.cmdExec(self.backends.ffmpeg, args, True)
+             matches = re.search(r'Stream.*Video:.*[,\s](?P<width>\d+?)x(?P<height>\d+?)[,\s]',
+                                 result, re.DOTALL).groupdict()
+@@ -250,7 +256,7 @@ def duration(self, source: str = None) -> QTime:
+         if source is None and hasattr(self.media, 'format') and self.parent is not None:
+             return self.parent.delta2QTime(float(self.media.format.duration))
+         else:
+-            args = '-i "{}"'.format(source)
++            args = ['-i', source]
+             result = self.cmdExec(self.backends.ffmpeg, args, True)
+             matches = re.search(r'Duration:\s(?P<hrs>\d+?):(?P<mins>\d+?):(?P<secs>\d+\.\d+?),',
+                                 result, re.DOTALL).groupdict()
+@@ -261,28 +267,34 @@ def codecs(self, source: str = None) -> tuple:
+         if source is None and hasattr(self.streams, 'video'):
+             return self.streams.video.codec_name, self.streams.audio[0].codec_name if len(self.streams.audio) else None
+         else:
+-            args = '-i "{}"'.format(source)
++            args = ['-i', source]
+             result = self.cmdExec(self.backends.ffmpeg, args, True)
+             vcodec = re.search(r'Stream.*Video:\s(\w+)', result).group(1)
+             acodec = re.search(r'Stream.*Audio:\s(\w+)', result).group(1)
+             return vcodec, acodec
+ 
+-    def parseMappings(self, allstreams: bool = True) -> str:
++    def parseMappings(self, allstreams: bool = True) -> List[str]:
+         if not len(self.mappings) or (self.parent is not None and self.parent.hasExternals()):
+-            return '-map 0 ' if allstreams else ''
++            return ['-map', '0'] if allstreams else []
+         # if False not in self.mappings:
+         #     return '-map 0 '
+-        output = ''
+-        for stream_id in range(len(self.mappings)):
+-            if self.mappings[stream_id]:
+-                output += '-map 0:{} '.format(stream_id)
++        output = []
++        for stream_id, stream in enumerate(self.mappings):
++            if stream:
++                output += ['-map', '0:{}'.format(stream_id)]
+         return output
+ 
+     def finalize(self, source: str) -> bool:
+         self.checkDiskSpace(source)
+         source_file, source_ext = os.path.splitext(source)
+         final_filename = '{0}_FINAL{1}'.format(source_file, source_ext)
+-        args = '-v error -i "{}" -map 0 -c copy -y "{}"'.format(source, final_filename)
++        args = [
++            '-v', 'error',
++            '-i', source,
++            '-map', '0',
++            '-c', 'copy',
++            '-y', final_filename,
++        ]
+         result = self.cmdExec(self.backends.ffmpeg, args)
+         if result and os.path.exists(final_filename):
+             os.replace(final_filename, source)
+@@ -290,16 +302,34 @@ def finalize(self, source: str) -> bool:
+         return False
+ 
+     def cut(self, source: str, output: str, frametime: str, duration: str, allstreams: bool=True, vcodec: str=None,
+-            run: bool=True) -> Union[bool, str]:
++            run: bool=True) -> Union[bool, List[str]]:
+         self.checkDiskSpace(output)
+         stream_map = self.parseMappings(allstreams)
+         if vcodec is not None:
+             encode_options = VideoService.config.encoding.get(vcodec, vcodec)
+-            args = '-v 32 -i "{}" -ss {} -t {} -c:v {} -c:a copy -c:s copy {}-avoid_negative_ts 1 ' \
+-                   '-y "{}"'.format(source, frametime, duration, encode_options, stream_map, output)
++            args = [
++                '-v', '32',
++                '-i', source,
++                '-ss', frametime,
++                '-t', duration,
++                '-c:v',
++            ] + encode_options + [
++                '-c:a', 'copy',
++                '-c:s', 'copy',
++            ] + stream_map + [
++                '-avoid_negative_ts', '1',
++                '-y', output,
++            ]
+         else:
+-            args = '-v error -ss {} -t {} -i "{}" -c copy {}-avoid_negative_ts 1 -y "{}"' \
+-                   .format(frametime, duration, source, stream_map, output)
++            args = [
++                '-v', 'error',
++                '-ss', frametime,
++                '-t', duration,
++                '-i', source,
++            ] + stream_map + [
++                '-avoid_negative_ts', '1',
++                '-y', output,
++            ]
+         if run:
+             result = self.cmdExec(self.backends.ffmpeg, args)
+             if not result or os.path.getsize(output) < 1000:
+@@ -337,14 +367,14 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             startproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             startproc.setObjectName('start.{}'.format(index))
+             startproc.started.connect(lambda: self.progress.emit(index))
+-            startproc.setArguments(shlex.split(
++            startproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['start'],
+                          frametime=str(start),
+                          duration=bisections['start'][1] - start,
+                          allstreams=allstreams,
+                          vcodec=self.streams.video.codec_name,
+-                         run=False)))
++                         run=False))
+             self.smartcut_jobs[index].procs.update(start=startproc)
+             self.smartcut_jobs[index].results.update(start=False)
+             startproc.start()
+@@ -356,13 +386,13 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+         middleproc.setWorkingDirectory(os.path.dirname(self.smartcut_jobs[index].files['middle']))
+         middleproc.setObjectName('middle.{}'.format(index))
+         middleproc.started.connect(lambda: self.progress.emit(index))
+-        middleproc.setArguments(shlex.split(
++        middleproc.setArguments(
+             self.cut(source=source,
+                      output=self.smartcut_jobs[index].files['middle'],
+                      frametime=bisections['start'][2],
+                      duration=bisections['end'][1] - bisections['start'][2],
+                      allstreams=allstreams,
+-                     run=False)))
++                     run=False))
+         self.smartcut_jobs[index].procs.update(middle=middleproc)
+         self.smartcut_jobs[index].results.update(middle=False)
+         if len(self.smartcut_jobs[index].procs) == 1:
+@@ -374,14 +404,14 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             endproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             endproc.setObjectName('end.{}'.format(index))
+             endproc.started.connect(lambda: self.progress.emit(index))
+-            endproc.setArguments(shlex.split(
++            endproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['end'],
+                          frametime=bisections['end'][1],
+                          duration=end - bisections['end'][1],
+                          allstreams=allstreams,
+                          vcodec=self.streams.video.codec_name,
+-                         run=False)))
++                         run=False))
+             self.smartcut_jobs[index].procs.update(end=endproc)
+             self.smartcut_jobs[index].results.update(end=False)
+ 
+@@ -458,15 +488,24 @@ def join(self, inputs: List[str], output: str, allstreams: bool=True, chapters:
+         filelist = os.path.normpath(os.path.join(os.path.dirname(inputs[0]), '_vidcutter.list'))
+         with open(filelist, 'w') as f:
+             [f.write('file \'{}\'\n'.format(file.replace("'", "\\'"))) for file in inputs]
+-        stream_map = '-map 0 ' if allstreams else ''
++        stream_map = ['-map', '0'] if allstreams else []
+         ffmetadata = None
+         if chapters is not None and len(chapters):
+             ffmetadata = self.getChapterFile(inputs, chapters)
+-            metadata = '-i "{}" -map_metadata 1 '.format(ffmetadata)
++            metadata = ['-i', ffmetadata, '-map_metadata', '1']
+         else:
+-            metadata = ''
+-        args = '-v error -f concat -safe 0 -i "{0}" {1}-c copy {2}-y "{3}"'
+-        result = self.cmdExec(self.backends.ffmpeg, args.format(filelist, metadata, stream_map, output))
++            metadata = []
++        args = [
++            '-v', 'error',
++            '-f', 'concat',
++            '-safe', '0',
++            '-i', filelist,
++        ] + metadata + [
++            '-c', 'copy',
++        ] + stream_map + [
++            '-y', output,
++        ]
++        result = self.cmdExec(self.backends.ffmpeg, args)
+         os.remove(filelist)
+         if chapters and ffmetadata is not None:
+             os.remove(ffmetadata)
+@@ -508,14 +547,18 @@ def getBSF(self, source: str) -> tuple:
+ 
+     def blackdetect(self, min_duration: float) -> None:
+         try:
+-            args = '-f lavfi -i "movie=\'{0}\',blackdetect=d={1:.1f}[out0]" '.format(os.path.basename(self.source),
+-                                                                                     min_duration)
+-            args += '-show_entries tags=lavfi.black_start,lavfi.black_end -of default=nw=1 -hide_banner'
++            args = [
++                '-f', 'lavfi',
++                '-i', 'movie={0},blackdetect=d={1:.1f}[out0]'.format(os.path.basename(self.source), min_duration),
++                '-show_entries', 'tags=lavfi.black_start,lavfi.black_end',
++                '-of', 'default=nw=1',
++                '-hide_banner',
++            ]
+             if os.getenv('DEBUG', False) or getattr(self.parent, 'verboseLogs', False):
+-                self.logger.info('{0} {1}'.format(self.backends.ffprobe, args))
++                self.logger.info('{0} {1}'.format(self.backends.ffprobe, ' '.join(args)))
+             self.filterproc = VideoService.initProc(self.backends.ffprobe, lambda: self.on_blackdetect(min_duration),
+                                                     os.path.dirname(self.source))
+-            self.filterproc.setArguments(shlex.split(args))
++            self.filterproc.setArguments(args)
+             self.filterproc.start()
+         except FileNotFoundError:
+             self.logger.exception('Could not find media file: {}'.format(self.source), exc_info=True)
+@@ -550,7 +593,13 @@ def killFilterProc(self) -> None:
+ 
+     def probe(self, source: str) -> Munch:
+         try:
+-            args = '-v error -show_streams -show_format -of json "{}"'.format(source)
++            args = [
++                '-v', 'error',
++                '-show_streams',
++                '-show_format',
++                '-of', 'json',
++                source,
++            ]
+             json_data = self.cmdExec(self.backends.ffprobe, args, output=True, mergechannels=False)
+             return Munch.fromDict(loads(json_data))
+         except FileNotFoundError:
+@@ -564,8 +613,14 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> list:
+         if len(self.keyframes) and source == self.source:
+             return self.keyframes
+         timecode = '0:00:00.000000' if formatted_time else 0
+-        args = '-v error -show_packets -select_streams v -show_entries packet=pts_time,flags ' \
+-               '{0}-of csv "{1}"'.format('-sexagesimal ' if formatted_time else '', source)
++        args = [
++            '-v', 'error',
++            '-show_packets',
++            '-select_streams', 'v',
++            '-show_entries', 'packet=pts_time,flags',
++        ] + (['-sexagesimal'] if formatted_time else []) + [
++            source,
++        ]
+         result = self.cmdExec(self.backends.ffprobe, args, output=True, suppresslog=True, mergechannels=False)
+         keyframe_times = []
+         for line in result.split('\n'):
+@@ -623,7 +678,15 @@ def mpegtsJoin(self, inputs: list, output: str, chapters: Optional[List[str]]=No
+                 outfiles.append(outfile)
+                 if os.path.isfile(outfile):
+                     os.remove(outfile)
+-                args = '-v error -i "{0}" -c copy -map 0 {1} -f mpegts "{2}"'.format(file, video_bsf, outfile)
++                args = [
++                    '-v', 'error',
++                    '-i', file,
++                    '-c', 'copy',
++                    '-map', '0',
++                    video_bsf,
++                    '-f', 'mpegts',
++                    outfile,
++                ]
+                 if not self.cmdExec(self.backends.ffmpeg, args):
+                     return result
+             # 2. losslessly concatenate at the file level
+@@ -633,11 +696,17 @@ def mpegtsJoin(self, inputs: list, output: str, chapters: Optional[List[str]]=No
+                 ffmetadata = None
+                 if chapters is not None and len(chapters):
+                     ffmetadata = self.getChapterFile(outfiles, chapters)
+-                    metadata = '-i "{}" -map_metadata 1 '.format(ffmetadata)
++                    metadata = ['-i ', ffmetadata, '-map_metadata', '1']
+                 else:
+-                    metadata = ''
+-                args = '-v error -i "concat:{0}" {1}-c copy {2} "{3}"' \
+-                       .format("|".join(map(str, outfiles)), metadata, audio_bsf, output)
++                    metadata = []
++                args = [
++                    '-v', 'error',
++                    '-i', "concat:{0}".format("|".join(map(str, outfiles))),
++                ] + metadata + [
++                    '-c', 'copy',
++                    audio_bsf,
++                    output,
++                ]
+                 result = self.cmdExec(self.backends.ffmpeg, args)
+                 # 3. cleanup mpegts files
+                 [os.remove(file) for file in outfiles]
+@@ -649,25 +718,25 @@ def mpegtsJoin(self, inputs: list, output: str, chapters: Optional[List[str]]=No
+         return result
+ 
+     def version(self) -> str:
+-        args = '-version'
++        args = ['-version']
+         result = self.cmdExec(self.backends.ffmpeg, args, True)
+         return re.search(r'ffmpeg\sversion\s([\S]+)\s', result).group(1)
+ 
+     def mediainfo(self, source: str, output: str = 'HTML') -> str:
+-        args = '--output={0} "{1}"'.format(output, source)
++        args = ['--output', output, source]
+         return self.cmdExec(self.backends.mediainfo, args, True, True)
+ 
+-    def cmdExec(self, cmd: str, args: str=None, output: bool=False, suppresslog: bool=False, workdir: str=None,
++    def cmdExec(self, cmd: str, args: List[str]=None, output: bool=False, suppresslog: bool=False, workdir: str=None,
+                 mergechannels: bool=True):
+         if self.proc.state() == QProcess.NotRunning:
+             if cmd == self.backends.mediainfo or not mergechannels:
+                 self.proc.setProcessChannelMode(QProcess.SeparateChannels)
+             if cmd in {self.backends.ffmpeg, self.backends.ffprobe}:
+-                args = '-hide_banner {}'.format(args)
++                args = ['-hide_banner'] + args
+             if os.getenv('DEBUG', False) or getattr(self.parent, 'verboseLogs', False):
+-                self.logger.info('{0} {1}'.format(cmd, args if args is not None else ''))
++                self.logger.info('{0} {1}'.format(cmd, ' '.join(args) if args is not None else ''))
+             self.proc.setWorkingDirectory(workdir if workdir is not None else VideoService.getAppPath())
+-            self.proc.start(cmd, shlex.split(args))
++            self.proc.start(cmd, args)
+             self.proc.readyReadStandardOutput.connect(
+                 partial(self.cmdOut, self.proc.readAllStandardOutput().data().decode().strip()))
+             self.proc.waitForFinished(-1)
+diff --git a/vidcutter/mediainfo.py b/vidcutter/mediainfo.py
+index 1f328d0..b0e2a01 100644
+--- a/vidcutter/mediainfo.py
++++ b/vidcutter/mediainfo.py
+@@ -94,7 +94,7 @@ def __init__(self, media, parent=None, flags=Qt.Dialog | Qt.WindowCloseButtonHin
+         okButton.accepted.connect(self.close)
+         button_layout = QHBoxLayout()
+         mediainfo_version = self.parent.videoService.cmdExec(self.parent.videoService.backends.mediainfo,
+-                                                             '--version', True)
++                                                             ['--version'], True)
+         if len(mediainfo_version) >= 2:
+             mediainfo_version = mediainfo_version.split('\n')[1]
+             mediainfo_label = QLabel('<div style="font-size:11px;"><b>Media information by:</b><br/>%s @ '
+
+From 7314f99dd1cbbbf92c341168c4e0b34d0b60dfc4 Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Tue, 13 Nov 2018 20:59:04 +0100
+Subject: [PATCH 04/27] Improve type annotations
+
+---
+ vidcutter/libs/config.py       | 17 +++++++++--------
+ vidcutter/libs/videoservice.py |  6 +++---
+ 2 files changed, 12 insertions(+), 11 deletions(-)
+
+diff --git a/vidcutter/libs/config.py b/vidcutter/libs/config.py
+index 34bb9fa..e8c269f 100644
+--- a/vidcutter/libs/config.py
++++ b/vidcutter/libs/config.py
+@@ -23,6 +23,7 @@
+ #######################################################################
+ 
+ from enum import Enum
++from typing import Dict, List
+ 
+ from PyQt5.QtCore import QSize
+ 
+@@ -40,33 +41,33 @@ def filter_settings() -> Munch:
+         )
+ 
+     @property
+-    def thumbnails(self) -> dict:
++    def thumbnails(self) -> Dict[str, QSize]:
+         return {'INDEX': QSize(100, 70), 'TIMELINE': QSize(105, 60)}
+ 
+     @property
+-    def video_codecs(self) -> list:
++    def video_codecs(self) -> List[str]:
+         return ['flv', 'h263', 'libvpx', 'libx264', 'libx265', 'libxvid', 'mpeg2video', 'mpeg4', 'msmpeg4', 'wmv2']
+ 
+     @property
+-    def audio_codecs(self) -> list:
++    def audio_codecs(self) -> List[str]:
+         return ['aac', 'ac3', 'libfaac', 'libmp3lame', 'libvo_aacenc', 'libvorbis', 'mp2', 'wmav2']
+ 
+     @property
+-    def formats(self) -> list:
++    def formats(self) -> List[str]:
+         return [
+             '3g2', '3gp', 'aac', 'ac3', 'avi', 'dv', 'flac', 'flv', 'm4a', 'm4v', 'mka', 'mkv', 'mov', 'mp3',
+             'mp4', 'mpg', 'ogg', 'vob', 'wav', 'webm', 'wma', 'wmv'
+         ]
+ 
+     @property
+-    def mpeg_formats(self) -> list:
++    def mpeg_formats(self) -> List[str]:
+         return [
+             'h264', 'hevc', 'mpeg4', 'divx', 'xvid', 'webm', 'ivf', 'vp9', 'mpeg2video', 'mpg2', 'mp2', 'mp3',
+             'aac'
+         ]
+ 
+     @property
+-    def encoding(self) -> dict:
++    def encoding(self) -> Dict[str, List[str]]:
+         return {
+             'hevc': ['libx265', '-tune', 'zerolatency', '-preset', 'ultrafast', '-x265-params', 'crf=23', '-qp', '4', '-flags', '+cgop'],
+             'h264': ['libx264', '-tune', 'film', '-preset', 'ultrafast', '-x264-params', 'crf=23', '-qp', '0', '-flags', '+cgop'],
+@@ -74,7 +75,7 @@ def encoding(self) -> dict:
+         }
+ 
+     @property
+-    def binaries(self) -> dict:
++    def binaries(self) -> Dict[str, Dict[str, List[str]]]:
+         return {
+             'nt': {  # Windows
+                 'ffmpeg': ['ffmpeg.exe'],
+@@ -89,7 +90,7 @@ def binaries(self) -> dict:
+         }
+ 
+     @property
+-    def filters(self) -> dict:
++    def filters(self) -> Dict[str, List[str]]:
+         return {
+             'all': [
+                 '3g2', '3gp', 'amv', 'asf', 'asx', 'avi', 'bin', 'dat', 'div', 'divx', 'f4v', 'flv',
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 0ddafd8..7d424a6 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -29,7 +29,7 @@
+ import sys
+ from bisect import bisect_left
+ from functools import partial
+-from typing import List, Optional, Union
++from typing import Dict, List, Optional, Tuple, Union
+ 
+ from PyQt5.QtCore import (pyqtSignal, pyqtSlot, QDir, QFileInfo, QObject, QProcess, QProcessEnvironment, QSettings,
+                           QSize, QStandardPaths, QStorageInfo, QTemporaryFile, QTime)
+@@ -609,7 +609,7 @@ def probe(self, source: str) -> Munch:
+             self.logger.exception('FFprobe JSON decoding error', exc_info=True)
+             raise
+ 
+-    def getKeyframes(self, source: str, formatted_time: bool = False) -> list:
++    def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[str, float]]:
+         if len(self.keyframes) and source == self.source:
+             return self.keyframes
+         timecode = '0:00:00.000000' if formatted_time else 0
+@@ -638,7 +638,7 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> list:
+             self.keyframes = keyframe_times
+         return keyframe_times
+ 
+-    def getGOPbisections(self, source: str, start: float, end: float) -> dict:
++    def getGOPbisections(self, source: str, start: float, end: float) -> Dict[str, Tuple[float, float, float]]:
+         keyframes = self.getKeyframes(source)
+         start_pos = bisect_left(keyframes, start)
+         end_pos = bisect_left(keyframes, end)
+
+From 310e0f8c282f153b0944da7260d8fc1e704bf9c9 Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Tue, 13 Nov 2018 21:09:29 +0100
+Subject: [PATCH 05/27] Fix regular expression for floating point time
+
+the decimal point is required.
+---
+ vidcutter/videocutter.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index c470a4a..268d6b0 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -125,8 +125,8 @@ def __init__(self, parent: QMainWindow):
+         self.videoService.addScenes.connect(self.addScenes)
+ 
+         self.project_files = {
+-            'edl': re.compile(r'(\d+(?:\.?\d+)?)\t(\d+(?:\.?\d+)?)\t([01])'),
+-            'vcp': re.compile(r'(\d+(?:\.?\d+)?)\t(\d+(?:\.?\d+)?)\t([01])\t(".*")$')
++            'edl': re.compile(r'(\d+(?:\.\d+)?)\t(\d+(?:\.\d+)?)\t([01])'),
++            'vcp': re.compile(r'(\d+(?:\.\d+)?)\t(\d+(?:\.\d+)?)\t([01])\t(".*")$')
+         }
+ 
+         self._initIcons()
+
+From 14ba1111e660321c755db0dc425105734478caba Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Tue, 13 Nov 2018 21:14:16 +0100
+Subject: [PATCH 06/27] Chapter is optional in .vcp file
+
+it no chapter name is set, the save routine only writes the trailing tab,
+but not quotes.
+This fails to load as the regular expression always expects a tab
+followed by quotes.
+
+Make that optional.
+
+Similar to <https://github.com/ozmartian/vidcutter/pull/203>
+---
+ vidcutter/videocutter.py | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index 268d6b0..670ad8f 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -126,7 +126,7 @@ def __init__(self, parent: QMainWindow):
+ 
+         self.project_files = {
+             'edl': re.compile(r'(\d+(?:\.\d+)?)\t(\d+(?:\.\d+)?)\t([01])'),
+-            'vcp': re.compile(r'(\d+(?:\.\d+)?)\t(\d+(?:\.\d+)?)\t([01])\t(".*")$')
++            'vcp': re.compile(r'(\d+(?:\.\d+)?)\t(\d+(?:\.\d+)?)\t([01])(?:\t"(.*)")?$')
+         }
+ 
+         self._initIcons()
+@@ -864,8 +864,7 @@ def openProject(self, checked: bool = False, project_file: str = None) -> Option
+                             clip_start = self.delta2QTime(float(start))
+                             clip_end = self.delta2QTime(float(stop))
+                             clip_image = self.captureImage(self.currentMedia, clip_start)
+-                            if project_type == 'vcp' and self.createChapters and len(chapter):
+-                                chapter = chapter[1:len(chapter) - 1]
++                            if project_type == 'vcp' and self.createChapters and chapter is not None:
+                                 if not len(chapter):
+                                     chapter = None
+                             else:
+
+From aac5d341588c4dc28196a395c925820a4ba0e8db Mon Sep 17 00:00:00 2001
+From: Philipp Matthias Hahn <pmhahn@pmhahn.de>
+Date: Sun, 18 Nov 2018 18:23:17 +0100
+Subject: [PATCH 07/27] Add documentation and type annotations
+
+---
+ vidcutter/libs/videoservice.py | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 7d424a6..9819a1f 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -610,6 +610,13 @@ def probe(self, source: str) -> Munch:
+             raise
+ 
+     def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[str, float]]:
++        """
++        Return a list of key-frame times.
++
++        :param source: The file name of the media file.
++        :param formatted_time: If `True`, return times list of strings. Defaults to `False`, which returns times as list of floats.
++        :returns: a list of key-frame times, eiter formatted as strings or floats.
++        """
+         if len(self.keyframes) and source == self.source:
+             return self.keyframes
+         timecode = '0:00:00.000000' if formatted_time else 0
+@@ -639,6 +646,14 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+         return keyframe_times
+ 
+     def getGOPbisections(self, source: str, start: float, end: float) -> Dict[str, Tuple[float, float, float]]:
++        """
++        Return a mapping of the start and end time to the 3 surronging key-frames.
++
++        :param source: The file name of the media file.
++        :param start: The start time.
++        :param end: The end time.
++        :returns: A dictionary mapping `start` and `end` to 3-tuples (before, exact, after).
++        """
+         keyframes = self.getKeyframes(source)
+         start_pos = bisect_left(keyframes, start)
+         end_pos = bisect_left(keyframes, end)
+
+From abe6013704945d7f80bf8b2fa1652194270fbceb Mon Sep 17 00:00:00 2001
+From: Philipp Hahn <hahn@univention.de>
+Date: Sun, 10 Nov 2019 20:10:44 +0100
+Subject: [PATCH 08/27] videoservice: Fix handling streams w/o codec_type
+
+Some streams do not have a 'codec_type', which throws the following
+traceback:
+
+> File "/usr/bin/vidcutter", line 11, in <module>
+>   load_entry_point('vidcutter==6.0.0', 'gui_scripts', 'vidcutter')()
+> File "/usr/lib/python3/dist-packages/vidcutter/__main__.py", line 380, in main
+>   win = MainWindow()
+> File "/usr/lib/python3/dist-packages/vidcutter/__main__.py", line 86, in __init__
+>   self.file_opener(self.video)
+> File "/usr/lib/python3/dist-packages/vidcutter/__main__.py", line 102, in file_opener
+>   self.cutter.loadMedia(filename)
+> File "/usr/lib/python3/dist-packages/vidcutter/videocutter.py", line 988, in loadMedia
+>   self.videoService.setMedia(self.currentMedia)
+> File "/usr/lib/python3/dist-packages/vidcutter/libs/videoservice.py", line 93, in setMedia
+>   [stream for stream in self.media.streams if stream.codec_type == codec_type.lower()])
+> File "/usr/lib/python3/dist-packages/vidcutter/libs/videoservice.py", line 93, in <listcomp>
+>   [stream for stream in self.media.streams if stream.codec_type == codec_type.lower()])
+> File "/usr/lib/python3/dist-packages/vidcutter/libs/munch.py", line 104, in __getattr__
+>   raise AttributeError(k)
+
+The output of
+    ffprobe -hide_banner -v error -show_streams -show_format -of json $FILE.mpg
+looks like this:
+
+> {
+>     "streams": [
+>     ...
+>         {
+>             "index": 8,
+>             "codec_tag_string": "[5][0][0][0]",
+>             "codec_tag": "0x0005",
+>             "id": "0x181a",
+>             "r_frame_rate": "0/0",
+>             "avg_frame_rate": "0/0",
+>             "time_base": "1/90000",
+>             "start_pts": 873142304,
+>             "start_time": "9701.581156",
+>             "duration_ts": 685844313,
+>             "duration": "7620.492367",
+>             "disposition": {
+>                 "default": 0,
+>                 "dub": 0,
+>                 "original": 0,
+>                 "comment": 0,
+>                 "lyrics": 0,
+>                 "karaoke": 0,
+>                 "forced": 0,
+>                 "hearing_impaired": 0,
+>                 "visual_impaired": 0,
+>                 "clean_effects": 0,
+>                 "attached_pic": 0,
+>                 "timed_thumbnails": 0
+>             }
+>         }
+> ...
+> ]}
+
+This is a DVB-C recording, which consists of 1 video stream, multiple
+audio- and subtext-streams, and that strange "data" stream.
+
+Similar to <https://github.com/ozmartian/vidcutter/pull/203>
+Fixes: <https://github.com/ozmartian/vidcutter/issues/211>
+---
+ vidcutter/libs/videoservice.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 9819a1f..edde84b 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -90,7 +90,7 @@ def setMedia(self, source: str) -> None:
+                     self.logger.info(self.media)
+                 for codec_type in Streams.__members__:
+                     setattr(self.streams, codec_type.lower(),
+-                            [stream for stream in self.media.streams if stream.codec_type == codec_type.lower()])
++                            [stream for stream in self.media.streams if stream.get('codec_type') == codec_type.lower()])
+                 if len(self.streams.video):
+                     self.streams.video = self.streams.video[0]  # we always assume one video stream per media file
+                 else:
+
+From 17366cd2ef5eed23ff1d76727d7676258758ccdf Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Sun, 29 Dec 2019 16:12:50 +0100
+Subject: [PATCH 09/27] fix ffprobe parsing for keyframes
+
+---
+ vidcutter/libs/videoservice.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index edde84b..74e29d8 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -631,9 +631,9 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+         result = self.cmdExec(self.backends.ffprobe, args, output=True, suppresslog=True, mergechannels=False)
+         keyframe_times = []
+         for line in result.split('\n'):
+-            if line.split(',')[1] != 'N/A':
+-                timecode = line.split(',')[1]
+-            if re.search(',K', line):
++            if line.split('=')[0] == 'pts_time':
++                timecode = line.split('=')[1]
++            if re.search('=K', line):
+                 if formatted_time:
+                     keyframe_times.append(timecode[:-3])
+                 else:
+
+From 8321b11dffdd80653c7e192d2377d7d94710f4a3 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Sun, 29 Dec 2019 16:13:21 +0100
+Subject: [PATCH 10/27] Use float timecodes throughout smartcut
+
+---
+ vidcutter/libs/videoservice.py | 27 +++++++++++++++++++++------
+ 1 file changed, 21 insertions(+), 6 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 74e29d8..a143838 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -263,6 +263,17 @@ def duration(self, source: str = None) -> QTime:
+             secs, msecs = matches['secs'].split('.')
+             return QTime(int(matches['hrs']), int(matches['mins']), int(secs), int(msecs))
+ 
++    def durationSecs(self, source: str = None) -> float:
++        if source is None and hasattr(self.media, 'format') and self.parent is not None:
++            return float(self.media.format.duration)
++        else:
++            args = ['-i', source]
++            result = self.cmdExec(self.backends.ffmpeg, args, True)
++            matches = re.search(r'Duration:\s(?P<hrs>\d+?):(?P<mins>\d+?):(?P<secs>\d+\.\d+?),',
++                                result, re.DOTALL).groupdict()
++            secs, msecs = matches['secs'].split('.')
++            return int(matches['hrs'])*3600 + int(matches['mins'])*60 + int(secs) + int(msecs) / 1000
++
+     def codecs(self, source: str = None) -> tuple:
+         if source is None and hasattr(self.streams, 'video'):
+             return self.streams.video.codec_name, self.streams.audio[0].codec_name if len(self.streams.audio) else None
+@@ -367,11 +378,12 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             startproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             startproc.setObjectName('start.{}'.format(index))
+             startproc.started.connect(lambda: self.progress.emit(index))
++            dur=bisections['start'][1] - start
+             startproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['start'],
+                          frametime=str(start),
+-                         duration=bisections['start'][1] - start,
++                         duration=str(dur),
+                          allstreams=allstreams,
+                          vcodec=self.streams.video.codec_name,
+                          run=False))
+@@ -386,11 +398,12 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+         middleproc.setWorkingDirectory(os.path.dirname(self.smartcut_jobs[index].files['middle']))
+         middleproc.setObjectName('middle.{}'.format(index))
+         middleproc.started.connect(lambda: self.progress.emit(index))
++        dur=bisections['end'][1] - bisections['start'][2]
+         middleproc.setArguments(
+             self.cut(source=source,
+                      output=self.smartcut_jobs[index].files['middle'],
+-                     frametime=bisections['start'][2],
+-                     duration=bisections['end'][1] - bisections['start'][2],
++                     frametime=str(bisections['start'][2]),
++                     duration=str(dur),
+                      allstreams=allstreams,
+                      run=False))
+         self.smartcut_jobs[index].procs.update(middle=middleproc)
+@@ -404,11 +417,12 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             endproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             endproc.setObjectName('end.{}'.format(index))
+             endproc.started.connect(lambda: self.progress.emit(index))
++            dur=end - bisections['end'][1]
+             endproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['end'],
+-                         frametime=bisections['end'][1],
+-                         duration=end - bisections['end'][1],
++                         frametime=str(bisections['end'][1]),
++                         duration=str(dur),
+                          allstreams=allstreams,
+                          vcodec=self.streams.video.codec_name,
+                          run=False))
+@@ -638,7 +652,8 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+                     keyframe_times.append(timecode[:-3])
+                 else:
+                     keyframe_times.append(float(timecode))
+-        last_keyframe = self.duration().toString('h:mm:ss.zzz')
++        #last_keyframe = self.duration().toString('h:mm:ss.zzz')
++        last_keyframe = self.durationSecs()
+         if keyframe_times[-1] != last_keyframe:
+             keyframe_times.append(last_keyframe)
+         if source == self.source and not formatted_time:
+
+From 306f153a76dd7583d41133f5e69985d93c98b466 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Sun, 29 Dec 2019 16:13:33 +0100
+Subject: [PATCH 11/27] Fix: can't concat list and string
+
+---
+ vidcutter/libs/videoservice.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index a143838..b69c204 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -324,7 +324,7 @@ def cut(self, source: str, output: str, frametime: str, duration: str, allstream
+                 '-ss', frametime,
+                 '-t', duration,
+                 '-c:v',
+-            ] + encode_options + [
++            ] + [encode_options] + [
+                 '-c:a', 'copy',
+                 '-c:s', 'copy',
+             ] + stream_map + [
+
+From 161931eff7473f69d964cb513afb723ba217438d Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Sun, 29 Dec 2019 20:23:41 +0100
+Subject: [PATCH 12/27] Bugfix: project file to include the media location
+
+---
+ vidcutter/videocutter.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index 670ad8f..b928a95 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -940,7 +940,7 @@ def saveProject(self, reboot: bool = False) -> None:
+                                      'Cannot save project file at {0}:\n\n{1}'.format(project_save, file.errorString()))
+                 return
+             qApp.setOverrideCursor(Qt.WaitCursor)
+-            if ptype == 'VidCutter Project (*.vcp)':
++            if ptype == 'VidCutter Project (*.vcp)' or ptype == 'VidCutter Project':
+                 # noinspection PyUnresolvedReferences
+                 QTextStream(file) << '{}\n'.format(self.currentMedia)
+             for clip in self.clipTimes:
+@@ -948,7 +948,7 @@ def saveProject(self, reboot: bool = False) -> None:
+                                        milliseconds=clip[0].msec())
+                 stop_time = timedelta(hours=clip[1].hour(), minutes=clip[1].minute(), seconds=clip[1].second(),
+                                       milliseconds=clip[1].msec())
+-                if ptype == 'VidCutter Project (*.vcp)':
++                if ptype == 'VidCutter Project (*.vcp)' or ptype == 'VidCutter Project':
+                     if self.createChapters:
+                         chapter = '"{}"'.format(clip[4]) if clip[4] is not None else '""'
+                     else:
+
+From 9f828cc40f55f915a81bfd02375e0b23d1038e98 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Mon, 30 Dec 2019 14:16:42 +0100
+Subject: [PATCH 13/27] Revert "fix ffprobe parsing for keyframes"
+
+This reverts commit 17366cd2ef5eed23ff1d76727d7676258758ccdf.
+---
+ vidcutter/libs/videoservice.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index b69c204..32c2a85 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -645,9 +645,9 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+         result = self.cmdExec(self.backends.ffprobe, args, output=True, suppresslog=True, mergechannels=False)
+         keyframe_times = []
+         for line in result.split('\n'):
+-            if line.split('=')[0] == 'pts_time':
+-                timecode = line.split('=')[1]
+-            if re.search('=K', line):
++            if line.split(',')[1] != 'N/A':
++                timecode = line.split(',')[1]
++            if re.search(',K', line):
+                 if formatted_time:
+                     keyframe_times.append(timecode[:-3])
+                 else:
+
+From 98abe2510b376c51963f05d49e61c07d490d3cd6 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Mon, 30 Dec 2019 23:32:19 +0100
+Subject: [PATCH 14/27] Add missing ffprobe argument for CSV output. This was
+ lost in the conversion from string args to list args in commit e7260e1f
+
+---
+ vidcutter/libs/videoservice.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 32c2a85..980e359 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -640,6 +640,7 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+             '-select_streams', 'v',
+             '-show_entries', 'packet=pts_time,flags',
+         ] + (['-sexagesimal'] if formatted_time else []) + [
++            '-of', 'csv',
+             source,
+         ]
+         result = self.cmdExec(self.backends.ffprobe, args, output=True, suppresslog=True, mergechannels=False)
+
+From 1ea25a53145d64d82b797e86decd0d8f40875ff9 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Tue, 31 Dec 2019 09:52:56 +0100
+Subject: [PATCH 15/27] Support for MPEG4 movies keyframes based on the
+ dts_time information. Background:
+ https://github.com/ozmartian/vidcutter/issues/257#issuecomment-569724678
+
+---
+ vidcutter/libs/videoservice.py | 36 +++++++++++++++++++++++++++-------
+ 1 file changed, 29 insertions(+), 7 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 980e359..e58852a 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -634,11 +634,14 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+         if len(self.keyframes) and source == self.source:
+             return self.keyframes
+         timecode = '0:00:00.000000' if formatted_time else 0
++
++        # for mpeg2ts movies the pts_time is never N/A
++        # Note that pts_time and dts_time are equal when both exist and pts_time is N/A for h264 content.
+         args = [
+             '-v', 'error',
+             '-show_packets',
+             '-select_streams', 'v',
+-            '-show_entries', 'packet=pts_time,flags',
++            '-show_entries', 'packet=pts_time,dts_time,flags',
+         ] + (['-sexagesimal'] if formatted_time else []) + [
+             '-of', 'csv',
+             source,
+@@ -646,13 +649,32 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+         result = self.cmdExec(self.backends.ffprobe, args, output=True, suppresslog=True, mergechannels=False)
+         keyframe_times = []
+         for line in result.split('\n'):
+-            if line.split(',')[1] != 'N/A':
+-                timecode = line.split(',')[1]
+-            if re.search(',K', line):
+-                if formatted_time:
+-                    keyframe_times.append(timecode[:-3])
++            parts=line.split(',')
++            # For some streams, e.g. DVB-T recorded MPEG2TS, the output may look like below.
++            # in other words, some lines may be empty. Those are the lines following packets with the side_data flag
++            # ==== ffprobe output BEGIN ======
++            # packet,audio,1,95942.464222,95942.464222,K_side_data,
++            #
++            # packet,audio,1,95942.488222,95942.488222,K_
++            # packet,subtitle,2,95942.550667,95942.550667,K_side_data,
++            #
++            # packet,audio,3,95942.464222,95942.464222,K_side_data,
++            #
++            # packet,audio,3,95942.488222,95942.488222,K_
++            # packet,video,0,95942.910667,95942.910667,__
++            # ==== ffprobe output BEGIN ======
++            #
++            # It is therefore important to check for the length of the split
++            if len(parts) > 1:
++                if parts[1] != 'N/A':
++                    timecode = parts[1]
+                 else:
+-                    keyframe_times.append(float(timecode))
++                    timecode = parts[2]
++                if re.search(',K', line):
++                    if formatted_time:
++                        keyframe_times.append(timecode[:-3])
++                    else:
++                        keyframe_times.append(float(timecode))
+         #last_keyframe = self.duration().toString('h:mm:ss.zzz')
+         last_keyframe = self.durationSecs()
+         if keyframe_times[-1] != last_keyframe:
+
+From 70256c413f17229529aeaf599c2c2b6b4f80fe0f Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Tue, 31 Dec 2019 09:54:02 +0100
+Subject: [PATCH 16/27] Added TODO: process sub-streams in the smartcut process
+ independently, as various sub-streams may have keyframes at different time 
+ positions.
+
+---
+ vidcutter/libs/videoservice.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index e58852a..8c81478 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -627,6 +627,10 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+         """
+         Return a list of key-frame times.
+ 
++        TODO: change this to return a list of key-frame times for specific sub-streams
++        Different sub-streams in a container (e.g. in MPEG2-TS) may contain keyframes at different positions. See this comment for more information:
++        https://github.com/ozmartian/vidcutter/issues/257#issuecomment-569889644
++
+         :param source: The file name of the media file.
+         :param formatted_time: If `True`, return times list of strings. Defaults to `False`, which returns times as list of floats.
+         :returns: a list of key-frame times, eiter formatted as strings or floats.
+
+From 4668600c3740fc5c65f21a1ad72d22dd36e33765 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Tue, 31 Dec 2019 22:15:26 +0100
+Subject: [PATCH 17/27] Bugfix: if the input stream has a .ts extension,
+ lossless transcoding fails because of in-place editing of the same file.
+
+---
+ vidcutter/libs/videoservice.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 8c81478..a5221d9 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -731,7 +731,7 @@ def mpegtsJoin(self, inputs: list, output: str, chapters: Optional[List[str]]=No
+             # 1. transcode to mpeg transport streams
+             for file in inputs:
+                 name, _ = os.path.splitext(file)
+-                outfile = '{}.ts'.format(name)
++                outfile = '{}-transcoded.ts'.format(name)
+                 outfiles.append(outfile)
+                 if os.path.isfile(outfile):
+                     os.remove(outfile)
+
+From 72f80b34b3e16277e07b06afdcc6123e69a3f0a1 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Wed, 1 Jan 2020 09:57:49 +0100
+Subject: [PATCH 18/27] Bugfix: Don't re-encode segments during smartcut
+ (especially middle ones), but use -vcodec copy to use the same settings as
+ before.
+
+---
+ vidcutter/libs/videoservice.py | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index a5221d9..bcd46a2 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -317,14 +317,15 @@ def cut(self, source: str, output: str, frametime: str, duration: str, allstream
+         self.checkDiskSpace(output)
+         stream_map = self.parseMappings(allstreams)
+         if vcodec is not None:
+-            encode_options = VideoService.config.encoding.get(vcodec, vcodec)
++            # encode_options = VideoService.config.encoding.get(vcodec, vcodec)
+             args = [
+                 '-v', '32',
+                 '-i', source,
+                 '-ss', frametime,
+                 '-t', duration,
+-                '-c:v',
+-            ] + [encode_options] + [
++                '-vcodec','copy',
++            #     '-c:v',
++            # ] + [encode_options] + [
+                 '-c:a', 'copy',
+                 '-c:s', 'copy',
+             ] + stream_map + [
+@@ -337,6 +338,7 @@ def cut(self, source: str, output: str, frametime: str, duration: str, allstream
+                 '-ss', frametime,
+                 '-t', duration,
+                 '-i', source,
++                '-c', 'copy',
+             ] + stream_map + [
+                 '-avoid_negative_ts', '1',
+                 '-y', output,
+
+From 2d8aa6f136422bcf5fd7b7b0bdfa5d05a6bef9fc Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Wed, 1 Jan 2020 18:12:08 +0100
+Subject: [PATCH 19/27] function to losslessly inject keyframes to
+ cut-positions using ffmpeg's force_key_frames
+
+---
+ vidcutter/libs/videoservice.py | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index bcd46a2..f657c68 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -274,6 +274,9 @@ def durationSecs(self, source: str = None) -> float:
+             secs, msecs = matches['secs'].split('.')
+             return int(matches['hrs'])*3600 + int(matches['mins'])*60 + int(secs) + int(msecs) / 1000
+ 
++    def qTime2float(self, qTime : QTime) -> float:
++        return qTime.hour()*3600 + qTime.minute()*60 + qTime.second() + qTime.msec() / 1000
++
+     def codecs(self, source: str = None) -> tuple:
+         if source is None and hasattr(self.streams, 'video'):
+             return self.streams.video.codec_name, self.streams.audio[0].codec_name if len(self.streams.audio) else None
+@@ -431,6 +434,34 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             self.smartcut_jobs[index].procs.update(end=endproc)
+             self.smartcut_jobs[index].results.update(end=False)
+ 
++    def forceKeyframes(self, source: str, clipTimes:[], fps: float, output: str) -> None:
++        # stream_map = self.parseMappings(true)
++        #eq(n,45)+eq(n,99)+eq(n,154)'
++        # forcedKeyframes = toFrames(clipTimes)
++        keyframesExpr = 'expr:'
++        for index, clip in enumerate(clipTimes):
++            # if index == 0 and clip[0] != 0:
++            #     keyframesExpr += f'eq(n,{self.qTime2float(clip[0])*fps})'
++            # else:
++            keyframesExpr += f'eq(n,{int(self.qTime2float(clip[0])*fps)})'
++            keyframesExpr += '+'
++            keyframesExpr += f'eq(n,{int(self.qTime2float(clip[1])*fps)})'
++            keyframesExpr += '+'
++        keyframesExpr = keyframesExpr[:-1]
++        args = [
++                '-v', '32',
++                '-i', source,
++                '-map','0',
++                '-c','copy',
++                '-force_key_frames', keyframesExpr,
++                '-y', output,
++            ]
++        # print(args)
++        if os.path.isfile(output):
++                os.remove(output)
++        if not self.cmdExec(self.backends.ffmpeg, args):
++            return result
++
+     @pyqtSlot(int, QProcess.ExitStatus)
+     def smartcheck(self, code: int, status: QProcess.ExitStatus) -> None:
+         if hasattr(self, 'smartcut_jobs') and not self.smartcutError:
+
+From f4382ac265592e97ffe22008366cfd5bed7a640a Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Wed, 1 Jan 2020 18:14:04 +0100
+Subject: [PATCH 20/27] Inject keyframes to CUT positions.
+
+---
+ vidcutter/videocutter.py | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index b928a95..658595b 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -1359,6 +1359,13 @@ def saveMedia(self) -> None:
+                 self.videoService.smartinit(clips)
+                 self.smartcutter(file, source_file, source_ext)
+                 return
++            videoWithForcedKeyframes = f'{source_file}-forced{source_ext}'
++            self.videoService.forceKeyframes(
++                source='{0}{1}'.format(source_file, source_ext),
++                clipTimes=self.clipTimes,
++                fps=25,
++                output=videoWithForcedKeyframes)
++
+             steps = 3 if clips > 1 else 2
+             self.seekSlider.showProgress(steps)
+             self.parent.lock_gui(True)
+@@ -1374,7 +1381,8 @@ def saveMedia(self) -> None:
+                         filename = os.path.join(self.workFolder, os.path.basename(filename))
+                     filename = QDir.toNativeSeparators(filename)
+                     filelist.append(filename)
+-                    if not self.videoService.cut(source='{0}{1}'.format(source_file, source_ext),
++                    # if not self.videoService.cut(source='{0}{1}'.format(source_file, source_ext),
++                    if not self.videoService.cut(source=videoWithForcedKeyframes,
+                                                  output=filename,
+                                                  frametime=clip[0].toString(self.timeformat),
+                                                  duration=duration,
+@@ -1402,8 +1410,17 @@ def smartcutter(self, file: str, source_file: str, source_ext: str) -> None:
+                     filename = os.path.join(self.workFolder, os.path.basename(filename))
+                 filename = QDir.toNativeSeparators(filename)
+                 self.smartcut_monitor.clips.append(filename)
++
++                # source='{0}{1}'.format(source_file, source_ext)
++                videoWithForcedKeyframes = f'{source_file}-forced{source_ext}'
++                self.videoService.forceKeyframes(
++                    source='{0}{1}'.format(source_file, source_ext),
++                    clipTimes=self.clipTimes,
++                    fsp=25,
++                    output=videoWithForcedKeyframes)
++
+                 self.videoService.smartcut(index=index,
+-                                           source='{0}{1}'.format(source_file, source_ext),
++                                           source=videoWithForcedKeyframes,
+                                            output=filename,
+                                            start=VideoCutter.qtime2delta(clip[0]),
+                                            end=VideoCutter.qtime2delta(clip[1]),
+
+From 4b26643f5f63899270bfb57dca8e766069db9a89 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Wed, 1 Jan 2020 23:25:08 +0100
+Subject: [PATCH 21/27] Don't re-parse keyframes for every single segment. Keep
+ it around for the duration of the smart-cut
+
+---
+ vidcutter/libs/videoservice.py | 12 ++++++------
+ vidcutter/videocutter.py       | 15 ++++++++-------
+ 2 files changed, 14 insertions(+), 13 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index f657c68..88d38ca 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -371,9 +371,9 @@ def smartinit(self, clips: int):
+             for index in range(clips)
+         ]
+ 
+-    def smartcut(self, index: int, source: str, output: str, start: float, end: float, allstreams: bool = True) -> None:
++    def smartcut(self, index: int, source: str, output: str, start: float, end: float, keyframes: [], allstreams: bool = True) -> None:
+         output_file, output_ext = os.path.splitext(output)
+-        bisections = self.getGOPbisections(source, start, end)
++        bisections = self.getGOPbisections(keyframes, start, end)
+         self.smartcut_jobs[index].output = output
+         self.smartcut_jobs[index].allstreams = allstreams
+         # ----------------------[ STEP 1 - start of clip if not starting on a keyframe ]-------------------------
+@@ -720,16 +720,16 @@ def getKeyframes(self, source: str, formatted_time: bool = False) -> List[Union[
+             self.keyframes = keyframe_times
+         return keyframe_times
+ 
+-    def getGOPbisections(self, source: str, start: float, end: float) -> Dict[str, Tuple[float, float, float]]:
++    def getGOPbisections(self, keyframes: [], start: float, end: float) -> Dict[str, Tuple[float, float, float]]:
+         """
+         Return a mapping of the start and end time to the 3 surronging key-frames.
+ 
+-        :param source: The file name of the media file.
++        :param keyframes: the keyframes to bisect for start / end
+         :param start: The start time.
+         :param end: The end time.
+-        :returns: A dictionary mapping `start` and `end` to 3-tuples (before, exact, after).
++        :returns: A dictionary mapping `start` and `end` to 3-tuples (before, nearest-before-or-exact, after).
+         """
+-        keyframes = self.getKeyframes(source)
++        
+         start_pos = bisect_left(keyframes, start)
+         end_pos = bisect_left(keyframes, end)
+         return {
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index 658595b..9d7fa4c 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -1398,6 +1398,13 @@ def saveMedia(self) -> None:
+ 
+     def smartcutter(self, file: str, source_file: str, source_ext: str) -> None:
+         self.smartcut_monitor = Munch(clips=[], results=[], externals=0)
++        videoWithForcedKeyframes = f'{source_file}-forced{source_ext}'
++        self.videoService.forceKeyframes(
++            source='{0}{1}'.format(source_file, source_ext),
++            clipTimes=self.clipTimes,
++            fps=25,
++            output=videoWithForcedKeyframes)
++        keyframes = self.videoService.getKeyframes(videoWithForcedKeyframes)
+         for index, clip in enumerate(self.clipTimes):
+             if len(clip[3]):
+                 self.smartcut_monitor.clips.append(clip[3])
+@@ -1412,18 +1419,12 @@ def smartcutter(self, file: str, source_file: str, source_ext: str) -> None:
+                 self.smartcut_monitor.clips.append(filename)
+ 
+                 # source='{0}{1}'.format(source_file, source_ext)
+-                videoWithForcedKeyframes = f'{source_file}-forced{source_ext}'
+-                self.videoService.forceKeyframes(
+-                    source='{0}{1}'.format(source_file, source_ext),
+-                    clipTimes=self.clipTimes,
+-                    fsp=25,
+-                    output=videoWithForcedKeyframes)
+-
+                 self.videoService.smartcut(index=index,
+                                            source=videoWithForcedKeyframes,
+                                            output=filename,
+                                            start=VideoCutter.qtime2delta(clip[0]),
+                                            end=VideoCutter.qtime2delta(clip[1]),
++                                           keyframes=keyframes,
+                                            allstreams=True)
+ 
+     @pyqtSlot(bool, str)
+
+From 597e9261cae1c94787b4df6c4a413ebfd83af54c Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Wed, 1 Jan 2020 23:27:13 +0100
+Subject: [PATCH 22/27] Bugfix: Smartcut START segment invalid duration.
+
+---
+ vidcutter/libs/videoservice.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 88d38ca..f0dab5e 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -383,7 +383,7 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             startproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             startproc.setObjectName('start.{}'.format(index))
+             startproc.started.connect(lambda: self.progress.emit(index))
+-            dur=bisections['start'][1] - start
++            dur=bisections['start'][2] - start
+             startproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['start'],
+
+From 64a53b1ad22a8c16dc75e07f13822783c94f92eb Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Thu, 2 Jan 2020 17:10:05 +0100
+Subject: [PATCH 23/27] Round timestamps to 6 decimals.
+
+---
+ vidcutter/libs/videoservice.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index f0dab5e..5cacd18 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -383,7 +383,7 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             startproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             startproc.setObjectName('start.{}'.format(index))
+             startproc.started.connect(lambda: self.progress.emit(index))
+-            dur=bisections['start'][2] - start
++            dur=round(bisections['start'][2] - start,6)
+             startproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['start'],
+@@ -403,7 +403,7 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+         middleproc.setWorkingDirectory(os.path.dirname(self.smartcut_jobs[index].files['middle']))
+         middleproc.setObjectName('middle.{}'.format(index))
+         middleproc.started.connect(lambda: self.progress.emit(index))
+-        dur=bisections['end'][1] - bisections['start'][2]
++        dur=round(bisections['end'][1] - bisections['start'][2],6)
+         middleproc.setArguments(
+             self.cut(source=source,
+                      output=self.smartcut_jobs[index].files['middle'],
+@@ -422,7 +422,7 @@ def smartcut(self, index: int, source: str, output: str, start: float, end: floa
+             endproc = VideoService.initProc(self.backends.ffmpeg, self.smartcheck, os.path.dirname(source))
+             endproc.setObjectName('end.{}'.format(index))
+             endproc.started.connect(lambda: self.progress.emit(index))
+-            dur=end - bisections['end'][1]
++            dur=round(end - bisections['end'][1],6)
+             endproc.setArguments(
+                 self.cut(source=source,
+                          output=self.smartcut_jobs[index].files['end'],
+
+From 9378cfdaaa1f359444fb5492d9dd818e3cd2e1a3 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Thu, 2 Jan 2020 17:09:18 +0100
+Subject: [PATCH 24/27] Use OUTPUT seeking (-i before -ss for ffmpeg). This
+ radically improves the precision of the (regular) CUT.
+
+---
+ vidcutter/libs/videoservice.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 5cacd18..614c85b 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -323,9 +323,9 @@ def cut(self, source: str, output: str, frametime: str, duration: str, allstream
+             # encode_options = VideoService.config.encoding.get(vcodec, vcodec)
+             args = [
+                 '-v', '32',
+-                '-i', source,
+                 '-ss', frametime,
+                 '-t', duration,
++                '-i', source,
+                 '-vcodec','copy',
+             #     '-c:v',
+             # ] + [encode_options] + [
+@@ -338,9 +338,9 @@ def cut(self, source: str, output: str, frametime: str, duration: str, allstream
+         else:
+             args = [
+                 '-v', 'error',
++                '-i', source,
+                 '-ss', frametime,
+                 '-t', duration,
+-                '-i', source,
+                 '-c', 'copy',
+             ] + stream_map + [
+                 '-avoid_negative_ts', '1',
+
+From 57dec524c219b94cd6514530d3c5e102a563ead7 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Thu, 2 Jan 2020 17:10:41 +0100
+Subject: [PATCH 25/27] Logging improvement
+
+---
+ vidcutter/libs/videoservice.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index 614c85b..a52266b 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -469,7 +469,7 @@ def smartcheck(self, code: int, status: QProcess.ExitStatus) -> None:
+             index = int(index)
+             self.smartcut_jobs[index].results[name] = (code == 0 and status == QProcess.NormalExit)
+             if os.getenv('DEBUG', False) or getattr(self.parent, 'verboseLogs', False):
+-                self.logger.info('SmartCut progress: {}'.format(self.smartcut_jobs[index].results))
++                self.logger.info('SmartCut progress for part {0}: {1}'.format(index, self.smartcut_jobs[index].results))
+             resultfile = self.smartcut_jobs[index].files.get(name)
+             if not self.smartcut_jobs[index].results[name] or os.path.getsize(resultfile) < 1000:
+                 args = self.smartcut_jobs[index].procs[name].arguments()
+
+From b30bd59830e467783096e01715ee12f64a04353b Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Fri, 3 Jan 2020 00:26:58 +0100
+Subject: [PATCH 26/27] Fix hardcoded FPS for keyframe injection
+
+---
+ vidcutter/videocutter.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/vidcutter/videocutter.py b/vidcutter/videocutter.py
+index 9d7fa4c..3c0a08e 100644
+--- a/vidcutter/videocutter.py
++++ b/vidcutter/videocutter.py
+@@ -1363,7 +1363,7 @@ def saveMedia(self) -> None:
+             self.videoService.forceKeyframes(
+                 source='{0}{1}'.format(source_file, source_ext),
+                 clipTimes=self.clipTimes,
+-                fps=25,
++                fps=eval(self.videoService.streams.video.avg_frame_rate),
+                 output=videoWithForcedKeyframes)
+ 
+             steps = 3 if clips > 1 else 2
+@@ -1402,7 +1402,7 @@ def smartcutter(self, file: str, source_file: str, source_ext: str) -> None:
+         self.videoService.forceKeyframes(
+             source='{0}{1}'.format(source_file, source_ext),
+             clipTimes=self.clipTimes,
+-            fps=25,
++            fps=eval(self.videoService.streams.video.avg_frame_rate),
+             output=videoWithForcedKeyframes)
+         keyframes = self.videoService.getKeyframes(videoWithForcedKeyframes)
+         for index, clip in enumerate(self.clipTimes):
+
+From 95a7b78784ab7dce90a94bc7d75c736845bc6a63 Mon Sep 17 00:00:00 2001
+From: ratcash <developer@ratcash.net>
+Date: Sat, 4 Jan 2020 21:38:40 +0100
+Subject: [PATCH 27/27] Bugfix: Use output seeking on both branch paths for CUT
+
+---
+ vidcutter/libs/videoservice.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/vidcutter/libs/videoservice.py b/vidcutter/libs/videoservice.py
+index a52266b..5325ae2 100644
+--- a/vidcutter/libs/videoservice.py
++++ b/vidcutter/libs/videoservice.py
+@@ -323,10 +323,10 @@ def cut(self, source: str, output: str, frametime: str, duration: str, allstream
+             # encode_options = VideoService.config.encoding.get(vcodec, vcodec)
+             args = [
+                 '-v', '32',
+-                '-ss', frametime,
+-                '-t', duration,
+                 '-i', source,
+                 '-vcodec','copy',
++                '-ss', frametime,
++                '-t', duration,
+             #     '-c:v',
+             # ] + [encode_options] + [
+                 '-c:a', 'copy',

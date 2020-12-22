@@ -1,4 +1,4 @@
-%global commit0 6d42b88a75fc67376b9f39b98cd72c8933840d7e
+%global commit0 9906f8f772519098129a29b49348965925043256
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
@@ -7,41 +7,29 @@
 
 Summary:    the simplest + fastest video cutter & joiner
 Name:       vidcutter
-Version:    6.0.0.5
-Release:    4%{?dist}
+Version:    6.0.5
+Release:    1%{?dist}
 License:    GPLv3+
 Source0:    https://github.com/ozmartian/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
-# wtf? if you want the package in Urpms, you need update to python >= 3.8 ... 
 Patch:      https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/260.patch
-Patch1:     https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/281.patch
-Patch2:     https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/283.patch
+Patch1:     https://patch-diff.githubusercontent.com/raw/ozmartian/vidcutter/pull/283.patch
 BuildArch:  x86_64
 Group:      Applications/Multimedia
 Url:        http://vidcutter.ozmartians.com
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires: gcc-c++
-%if 0%{?fedora} >= 33
-BuildRequires:  python3.8-devel
-%else
+
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 BuildRequires: python3-rpm-macros
-%endif
+
 BuildRequires: mpv-libs-devel
 #-------------------------------------------
-%if 0%{?fedora} >= 33
-Requires: python3.8
-Requires: python3.8-qt5 
-Requires: python3.8-numpy
-Requires: python3.8-simplejson
-Requires: python3.8-dbus
-Requires: python3.8-requests
-Requires: python3.8-pyopengl
-%else
+
 Requires: python3-qt5 
 Requires: python3-pyopengl
-%endif
+
 Requires: mpv-libs
 Requires: ffmpeg 
 Requires: mediainfo
@@ -56,25 +44,17 @@ Requires: mediainfo
 
 # Change shebang in all relevant files in this directory and all subdirectories
 # See `man find` for how the `-exec command {} +` syntax works
-%if 0%{?fedora} >= 33
-find -depth -type f -writable -name "*.py" -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!/usr/bin/python3.8=' {} +
-%else
+
 find -type f -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
-%endif
+
 
 %build
-%if 0%{?fedora} >= 33
-python3.8 setup.py build
-%else
 %py3_build
-%endif
+
 
 %install
-%if 0%{?fedora} >= 33
-python3.8 setup.py install --root=%{buildroot} --optimize=1 --skip-build
-%else
 %py3_install
-%endif
+
 
 %clean
 rm -rf %{buildroot}
@@ -86,13 +66,8 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_docdir}/vidcutter/CHANGELOG
 %{_docdir}/vidcutter/LICENSE
-%if 0%{?fedora} >= 33
-%{_libdir}/python3.8/site-packages/%{name}
-%{_libdir}/python3.8/site-packages/%{name}-*-py*.egg-info
-%else
 %{python3_sitearch}/%{name}
 %{python3_sitearch}/%{name}-*-py*.egg-info
-%endif
 %{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/com.ozmartians.VidCutter.png
 %{_datadir}/icons/hicolor/scalable/apps/com.ozmartians.VidCutter.svg
@@ -100,6 +75,9 @@ rm -rf %{buildroot}
 %{_datadir}/metainfo/com.ozmartians.VidCutter.appdata.xml
 
 %changelog
+
+* Sun Dec 20 2020 David Va <davidva AT tuta DOT io> 6.0.5-1
+- Updated to 6.0.5
 
 * Tue Jun 02 2020 David Va <davidva AT tuta DOT io> 6.0.0.5-4
 - Rebuilt for python3.9
